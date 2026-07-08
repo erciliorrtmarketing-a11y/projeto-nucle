@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>performance · nuclê</title>
+  <meta name="description" content="nuclê / performance. Tráfego Pago, SEO, Inbound Marketing, CRO e Métricas. Cliques que viram clientes reais.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0a'/%3E%3Ctext x='50' y='66' font-family='monospace' font-size='58' font-weight='800' text-anchor='middle' fill='white'%3En%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/performance.css?v=3">
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <a class="back" href="index.html" aria-label="Voltar para a página inicial"><span class="word">nuclê</span></a>
+  <a class="to-menu" href="index.html#menu" aria-label="Abrir o menu de seções">menu <span class="tm-bars" aria-hidden="true"><i></i><i></i></span></a>
+
+  <h1 class="bigname" id="bigname">PERFORMANCE</h1>
+
+  <main class="stage">
+    <!-- DASHBOARD VISUAL (sem números) -->
+    <section class="dash" id="dash" data-profile="default" aria-label="Dashboard visual de performance">
+      <!-- NAV DAS 5 FRENTES -->
+      <header class="dash-bar">
+        <nav class="dash-nav" id="dashNav" aria-label="Frentes de performance">
+          <button class="dn-tab" type="button" data-id="trafego">tráfego pago</button>
+          <button class="dn-tab" type="button" data-id="seo">SEO</button>
+          <button class="dn-tab" type="button" data-id="inbound">inbound</button>
+          <button class="dn-tab" type="button" data-id="cro">CRO</button>
+          <button class="dn-tab" type="button" data-id="metricas">métricas</button>
+        </nav>
+      </header>
+
+      <!-- VISUAIS ABSTRATOS -->
+      <div class="visuals">
+        <!-- HERO: Gráfico que muda por perfil -->
+        <article class="viz viz-hero" id="vizHero" data-profile="default">
+          <span class="viz-label" id="vizHeroLabel">crescimento</span>
+          <div class="viz-area">
+
+            <!-- Default — linha ascendente suave -->
+            <svg class="viz-svg" data-for="default" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
+              <line class="g-grid" x1="0" y1="50" x2="400" y2="50"/>
+              <line class="g-grid" x1="0" y1="100" x2="400" y2="100"/>
+              <line class="g-grid" x1="0" y1="150" x2="400" y2="150"/>
+              <path class="g-fill" d="M 0 170 C 60 165, 100 150, 140 130 C 180 110, 220 95, 260 75 C 300 55, 340 35, 400 15 L 400 200 L 0 200 Z"/>
+              <path class="g-line" d="M 0 170 C 60 165, 100 150, 140 130 C 180 110, 220 95, 260 75 C 300 55, 340 35, 400 15"/>
+              <circle class="g-pulse" cx="400" cy="15" r="5"/>
+              <circle class="g-pulse-ring" cx="400" cy="15" r="5"/>
+            </svg>
+
+            <!-- Tráfego Pago — barras de campanhas múltiplas -->
+            <svg class="viz-svg" data-for="trafego" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
+              <line class="g-grid" x1="0" y1="50" x2="400" y2="50"/>
+              <line class="g-grid" x1="0" y1="100" x2="400" y2="100"/>
+              <line class="g-grid" x1="0" y1="150" x2="400" y2="150"/>
+              <g class="g-bars">
+                <rect class="g-bar" x="20"  y="120" width="44" height="70"/>
+                <rect class="g-bar" x="84"  y="80"  width="44" height="110"/>
+                <rect class="g-bar" x="148" y="40"  width="44" height="150"/>
+                <rect class="g-bar" x="212" y="100" width="44" height="90"/>
+                <rect class="g-bar" x="276" y="20"  width="44" height="170"/>
+                <rect class="g-bar" x="340" y="70"  width="44" height="120"/>
+              </g>
+            </svg>
+
+            <!-- SEO — curva S exponencial -->
+            <svg class="viz-svg" data-for="seo" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
+              <line class="g-grid" x1="0" y1="50" x2="400" y2="50"/>
+              <line class="g-grid" x1="0" y1="100" x2="400" y2="100"/>
+              <line class="g-grid" x1="0" y1="150" x2="400" y2="150"/>
+              <path class="g-fill" d="M 0 195 L 60 192 L 120 185 L 170 170 L 215 140 L 255 95 L 295 55 L 340 30 L 400 15 L 400 200 L 0 200 Z"/>
+              <path class="g-line" d="M 0 195 L 60 192 L 120 185 L 170 170 L 215 140 L 255 95 L 295 55 L 340 30 L 400 15"/>
+              <circle class="g-pulse" cx="400" cy="15" r="5"/>
+              <circle class="g-pulse-ring" cx="400" cy="15" r="5"/>
+            </svg>
+
+            <!-- Inbound — fluxo de nutrição (4 nós conectados) -->
+            <svg class="viz-svg" data-for="inbound" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
+              <line class="g-flow-line" x1="60"  y1="160" x2="160" y2="120"/>
+              <line class="g-flow-line" x1="160" y1="120" x2="260" y2="80"/>
+              <line class="g-flow-line" x1="260" y1="80"  x2="340" y2="40"/>
+              <circle class="g-node" cx="60"  cy="160" r="14"/>
+              <circle class="g-node" cx="160" cy="120" r="14"/>
+              <circle class="g-node" cx="260" cy="80"  r="14"/>
+              <circle class="g-node g-node-final" cx="340" cy="40" r="16"/>
+              <text class="g-flow-txt" x="60"  y="190">captação</text>
+              <text class="g-flow-txt" x="160" y="150">nutrição</text>
+              <text class="g-flow-txt" x="260" y="110">qualif.</text>
+              <text class="g-flow-txt g-flow-end" x="340" y="20">conversão</text>
+            </svg>
+
+            <!-- CRO — duas linhas divergentes A/B -->
+            <svg class="viz-svg" data-for="cro" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
+              <line class="g-grid" x1="0" y1="50" x2="400" y2="50"/>
+              <line class="g-grid" x1="0" y1="100" x2="400" y2="100"/>
+              <line class="g-grid" x1="0" y1="150" x2="400" y2="150"/>
+              <!-- Variante A (controle) -->
+              <path class="g-line g-line-dim" d="M 0 130 C 80 128, 160 130, 240 128 C 320 127, 360 126, 400 125"/>
+              <text class="g-ab" x="380" y="118">A</text>
+              <!-- Variante B (vencedor) -->
+              <path class="g-line" d="M 0 130 C 80 110, 160 80, 240 55 C 320 35, 360 25, 400 18"/>
+              <text class="g-ab g-ab-win" x="380" y="10">B</text>
+              <circle class="g-pulse" cx="400" cy="18" r="5"/>
+              <circle class="g-pulse-ring" cx="400" cy="18" r="5"/>
+            </svg>
+
+            <!-- Métricas — grid de sparklines -->
+            <svg class="viz-svg" data-for="metricas" viewBox="0 0 400 200" preserveAspectRatio="none" aria-hidden="true">
+              <!-- 4 sparklines em grid 2x2 -->
+              <g class="g-spark" transform="translate(0,0)">
+                <rect class="g-spark-bg" x="10" y="10" width="180" height="80" rx="4"/>
+                <path class="g-line g-line-thin" d="M 20 75 L 50 70 L 80 60 L 110 55 L 140 45 L 170 30 L 180 25"/>
+                <text class="g-spark-lbl" x="20" y="30">GA4</text>
+              </g>
+              <g class="g-spark" transform="translate(0,0)">
+                <rect class="g-spark-bg" x="210" y="10" width="180" height="80" rx="4"/>
+                <path class="g-line g-line-thin" d="M 220 70 L 250 55 L 280 60 L 310 40 L 340 50 L 370 25 L 380 30"/>
+                <text class="g-spark-lbl" x="220" y="30">GTM</text>
+              </g>
+              <g class="g-spark" transform="translate(0,0)">
+                <rect class="g-spark-bg" x="10" y="110" width="180" height="80" rx="4"/>
+                <path class="g-line g-line-thin" d="M 20 175 L 50 160 L 80 155 L 110 140 L 140 145 L 170 125 L 180 130"/>
+                <text class="g-spark-lbl" x="20" y="130">Looker</text>
+              </g>
+              <g class="g-spark" transform="translate(0,0)">
+                <rect class="g-spark-bg" x="210" y="110" width="180" height="80" rx="4"/>
+                <path class="g-line g-line-thin" d="M 220 170 L 250 160 L 280 150 L 310 145 L 340 130 L 370 125 L 380 120"/>
+                <text class="g-spark-lbl" x="220" y="130">BI</text>
+              </g>
+            </svg>
+
+          </div>
+        </article>
+
+        <!-- LIVE ACTIVITY (SVG muda por perfil via JS) -->
+        <article class="viz" id="vizLive">
+          <span class="viz-label" id="vizLiveLabel">campanhas ao vivo</span>
+          <div class="viz-area" id="vizLiveArea"></div>
+        </article>
+
+        <!-- ALCANCE (SVG muda por perfil via JS) -->
+        <article class="viz" id="vizReach">
+          <span class="viz-label" id="vizReachLabel">alcance</span>
+          <div class="viz-area" id="vizReachArea"></div>
+        </article>
+
+        <!-- CANAIS / BARRAS (SVG muda por perfil via JS) -->
+        <article class="viz" id="vizChannels">
+          <span class="viz-label" id="vizChannelsLabel">canais ativos</span>
+          <div class="viz-area" id="vizChannelsArea"></div>
+        </article>
+
+        <!-- OTIMIZAÇÃO / PULSE (SVG muda por perfil via JS) -->
+        <article class="viz" id="vizOpt">
+          <span class="viz-label" id="vizOptLabel">otimização contínua</span>
+          <div class="viz-area" id="vizOptArea"></div>
+        </article>
+      </div>
+
+      <!-- FUNIL VISUAL (sem números) -->
+      <div class="funnel" aria-label="Funil de conversão">
+        <span class="funnel-title">do visitante ao cliente</span>
+        <div class="funnel-row">
+          <span class="f-label">visitam o site</span>
+          <div class="f-bar"></div>
+        </div>
+        <div class="funnel-row">
+          <span class="f-label">engajam com a marca</span>
+          <div class="f-bar"></div>
+        </div>
+        <div class="funnel-row">
+          <span class="f-label">viram interessados</span>
+          <div class="f-bar"></div>
+        </div>
+        <div class="funnel-row">
+          <span class="f-label">vão pro time comercial</span>
+          <div class="f-bar"></div>
+        </div>
+        <div class="funnel-row">
+          <span class="f-label">viram clientes</span>
+          <div class="f-bar"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PAINEL LATERAL -->
+    <aside class="panel" aria-label="Detalhes do serviço">
+      <div class="panel-card" id="panelCard">
+        <span class="p-eyebrow">5 frentes integradas</span>
+        <h2 class="p-name">performance</h2>
+        <p class="p-tag">cliques que viram clientes reais, não vaidade. Conversão.</p>
+        <p class="p-desc">A área de performance da nuclê transforma investimento em retorno mensurável. Cinco frentes integradas operando como um único motor de crescimento: tráfego pago, SEO orgânico, inbound, CRO e métricas.</p>
+        <button class="p-cta" type="button" data-jump="trafego">começar pelo tráfego pago →</button>
+      </div>
+    </aside>
+  </main>
+
+
+  <script src="assets/performance.js?v=2" defer></script>
+</body>
+</html>

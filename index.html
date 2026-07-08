@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>nuclê · o núcleo estratégico</title>
+  <meta name="description" content="nuclê. Ecossistema de marketing. Cinco frentes integradas sob uma única inteligência centralizada: criação, performance, estratégia, estúdio e comercial.">
+  <meta property="og:title" content="nuclê · o núcleo estratégico">
+  <meta property="og:description" content="Cinco frentes integradas sob uma única inteligência centralizada.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0a'/%3E%3Ctext x='50' y='66' font-family='monospace' font-size='58' font-weight='800' text-anchor='middle' fill='white'%3En%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://picsum.photos">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/index.css?v=18">
+</head>
+<body>
+
+  <!-- FUNDO -->
+  <div class="stage" aria-hidden="true">
+    <canvas class="blob-canvas" id="blob"></canvas>
+    <div class="bg-vignette"></div>
+  </div>
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="lights-flash" aria-hidden="true"></div>
+
+  <!-- ícone reutilizável -->
+  <svg class="svg-defs" width="0" height="0" aria-hidden="true">
+    <symbol id="nuclei" viewBox="0 0 1440 810">
+      <g fill="currentColor">
+        <path d="M 376.59 -330.41 L 143.5 -245 L 376.59 -160.30 L 376.59 -72.80 L 43.41 -199.5 L 43.41 -290.5 L 376.59 -417.20 Z" transform="translate(293.25,669.5)"></path>
+        <path d="M 376.59 -290.5 L 376.59 -199.5 L 43.41 -72.80 L 43.41 -160.30 L 276.5 -245 L 43.41 -330.41 L 43.41 -417.20 Z" transform="translate(666.19,669.5)"></path>
+      </g>
+    </symbol>
+  </svg>
+
+  <!-- HEADER -->
+  <header>
+    <a class="mark" href="index.html" aria-label="nuclê · início">
+      <span class="mark-txt">nuclê</span>
+    </a>
+    <button class="menu-btn" id="openMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="overlay">
+      Menu <span class="bars" aria-hidden="true"><i></i><i></i></span>
+    </button>
+  </header>
+
+  <!-- HERO -->
+  <main class="hero" id="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="logo" aria-label="nuclê">
+      <span class="word seg w">nuclê</span>
+    </div>
+    <p class="tagline">Cinco frentes integradas sob uma única inteligência centralizada.</p>
+    <a class="scroll-cue" href="#sobre" aria-label="Rolar para saber mais">
+      <span class="sc-label">o que é a nuclê</span>
+      <span class="sc-line" aria-hidden="true"></span>
+    </a>
+  </main>
+
+  <!-- SOBRE / O QUE É A NUCLÊ -->
+  <section class="about" id="sobre">
+    <div class="about-inner">
+      <span class="ab-eyebrow">o que é a nuclê</span>
+      <h2 class="ab-title">marketing como um só <span class="ab-brand">nuclê</span>.</h2>
+      <p class="ab-lead">
+        A nuclê é um <em>ecossistema de marketing</em>. Em vez de fornecedores
+        soltos para cada demanda, cinco frentes operam sob uma única
+        inteligência centralizada. Estratégia, narrativa e execução no mesmo
+        núcleo, puxando na mesma direção.
+      </p>
+
+      <div class="nucleo" role="img" aria-label="As cinco frentes da nuclê (criação, performance, estratégia, estúdio e comercial) orbitando um único núcleo">
+        <span class="nu-ring" aria-hidden="true"></span>
+        <span class="nu-ring nu-ring-2" aria-hidden="true"></span>
+
+        <div class="nu-orbit">
+          <div class="nu-node nu-1"><span class="nu-node-in">
+            <span class="nu-name">criação</span>
+            <span class="nu-desc">branding, identidade e design</span>
+          </span></div>
+          <div class="nu-node nu-2"><span class="nu-node-in">
+            <span class="nu-name">performance</span>
+            <span class="nu-desc">tráfego e dados que convertem</span>
+          </span></div>
+          <div class="nu-node nu-3"><span class="nu-node-in">
+            <span class="nu-name">estratégia</span>
+            <span class="nu-desc">pesquisa e posicionamento</span>
+          </span></div>
+          <div class="nu-node nu-4"><span class="nu-node-in">
+            <span class="nu-name">estúdio</span>
+            <span class="nu-desc">audiovisual e conteúdo</span>
+          </span></div>
+          <div class="nu-node nu-5"><span class="nu-node-in">
+            <span class="nu-name">comercial</span>
+            <span class="nu-desc">prospecção, funil e vendas</span>
+          </span></div>
+        </div>
+
+        <div class="nu-center">
+          <span class="nu-mark">nuclê</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FECHAMENTO / ATALHO DIRETO -->
+  <section class="cta" id="contato">
+    <div class="cta-inner">
+      <span class="cta-eyebrow">atalho direto</span>
+      <h2 class="cta-title">fale direto com a <span class="ab-brand">nuclê</span>.</h2>
+      <p class="cta-lead">
+        O menu abre cada frente com calma. Mas se você já sabe o que precisa,
+        pule a etapa: chame a gente agora.<br>A estratégia começa na conversa.
+      </p>
+      <div class="cta-actions">
+        <a class="cta-btn cta-btn-primary" href="https://wa.me/5519993832455?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20nucl%C3%AA." target="_blank" rel="noopener">
+          <span>falar no whatsapp</span><span class="cta-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="cta-btn cta-btn-ghost" href="mailto:contato@nucle.com.br">
+          <span>enviar e-mail</span><span class="cta-arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>nuclê © 2026</span>
+    <span class="foot-contact">
+      <a href="tel:+5519993832455">+55 (19) 99383-2455</a>
+      <span class="foot-sep" aria-hidden="true">·</span>
+      <a href="mailto:contato@nucle.com.br">contato@nucle.com.br</a>
+    </span>
+  </footer>
+
+  <!-- PRELOADER -->
+  <div class="preloader" id="preloader">
+    <div class="pl-top"><b>nuclê</b></div>
+    <div class="pl-num"><span id="plNum">0</span><span class="pct">%</span></div>
+    <div class="pl-label">carregando o núcleo</div>
+    <div class="pl-bar" id="plBar"></div>
+  </div>
+
+  <!-- MENU OVERLAY -->
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-label="Menu de serviços">
+    <div class="ov-top">
+      <button class="mk" id="menuLogoBtn" type="button" aria-label="Voltar à página inicial"><span class="mk-txt">nuclê</span></button>
+    </div>
+    <div class="ov-body">
+      <nav class="menu-list" aria-label="Áreas">
+        <a class="menu-item has-media" href="estudio.html" data-area="estudio">
+          <div class="mi-media" aria-hidden="true">
+            <div class="mi-strip">
+              <img src="https://picsum.photos/id/1043/420/420?grayscale" alt="" loading="eager" decoding="async">
+              <img src="https://picsum.photos/id/1031/420/420?grayscale" alt="" loading="eager" decoding="async">
+              <img src="https://picsum.photos/id/1024/420/420?grayscale" alt="" loading="eager" decoding="async">
+              <img src="https://picsum.photos/id/1019/420/420?grayscale" alt="" loading="eager" decoding="async">
+              <img src="https://picsum.photos/id/1015/420/420?grayscale" alt="" loading="eager" decoding="async">
+              <img src="https://picsum.photos/id/1011/420/420?grayscale" alt="" loading="eager" decoding="async">
+              <img src="https://picsum.photos/id/1004/420/420?grayscale" alt="" loading="eager" decoding="async">
+              <img src="https://picsum.photos/id/999/420/420?grayscale" alt="" loading="eager" decoding="async">
+              <img src="https://picsum.photos/id/1043/420/420?grayscale" alt="" loading="eager" decoding="async">
+              <img src="https://picsum.photos/id/1031/420/420?grayscale" alt="" loading="eager" decoding="async">
+              <img src="https://picsum.photos/id/1024/420/420?grayscale" alt="" loading="eager" decoding="async">
+              <img src="https://picsum.photos/id/1019/420/420?grayscale" alt="" loading="eager" decoding="async">
+              <img src="https://picsum.photos/id/1015/420/420?grayscale" alt="" loading="eager" decoding="async">
+              <img src="https://picsum.photos/id/1011/420/420?grayscale" alt="" loading="eager" decoding="async">
+              <img src="https://picsum.photos/id/1004/420/420?grayscale" alt="" loading="eager" decoding="async">
+              <img src="https://picsum.photos/id/999/420/420?grayscale" alt="" loading="eager" decoding="async">
+            </div>
+          </div>
+          <span class="mi-name">estúdio</span>
+          <span class="mi-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="menu-item" href="criacao.html" data-area="criacao">
+          <span class="mi-name">criação</span>
+          <span class="mi-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="menu-item" href="performance.html" data-area="performance">
+          <span class="mi-name">performance</span>
+          <span class="mi-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="menu-item" href="estrategia.html" data-area="estrategia">
+          <span class="mi-name">estratégia</span>
+          <span class="mi-arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="menu-item" href="comercial.html" data-area="comercial">
+          <span class="mi-name">comercial</span>
+          <span class="mi-arrow" aria-hidden="true">→</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- libs externas usadas pelo blob 3D -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="assets/simplex-noise.js"></script>
+
+  <!-- lógica da página: preloader, menu, blob -->
+  <script src="assets/index.js?v=4" defer></script>
+</body>
+</html>

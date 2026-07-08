@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>estúdio · nuclê</title>
+  <meta name="description" content="nuclê / estúdio. Audiovisual, identidade, digital e social. Da concepção à entrega final, sob uma única inteligência criativa.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%230a0a0a'/%3E%3Ctext x='50' y='66' font-family='monospace' font-size='58' font-weight='800' text-anchor='middle' fill='white'%3En%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://picsum.photos">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/estudio.css?v=3">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <a class="back" href="index.html" aria-label="Voltar para a página inicial"><span class="word">nuclê</span></a>
+  <a class="to-menu" href="index.html#menu" aria-label="Abrir o menu de seções">menu <span class="tm-bars" aria-hidden="true"><i></i><i></i></span></a>
+
+  <main class="stage">
+    <!-- LADO ESQUERDO: nome do segmento ativo -->
+    <aside class="info-side info-left">
+      <h1 class="info-name" id="infoName">audiovisual</h1>
+    </aside>
+
+    <!-- CENTRO: câmera -->
+    <div class="cam" id="cam" aria-label="Câmera. Clique numa seção pra focar nela.">
+      <div class="cam-body"></div>
+      <div class="cam-glass" aria-hidden="true"></div>
+
+      <div class="cam-inner">
+        <div class="frame active" data-id="audiovisual"
+             style="background-image:url('https://picsum.photos/id/1043/600/600?grayscale')"></div>
+        <div class="frame" data-id="filmmaker"
+             style="background-image:url('https://picsum.photos/id/1031/600/600?grayscale')"></div>
+        <div class="frame" data-id="captacao"
+             style="background-image:url('https://picsum.photos/id/1024/600/600?grayscale')"></div>
+        <div class="frame" data-id="direcao"
+             style="background-image:url('https://picsum.photos/id/1019/600/600?grayscale')"></div>
+        <div class="frame" data-id="pos"
+             style="background-image:url('https://picsum.photos/id/1015/600/600?grayscale')"></div>
+      </div>
+
+      <svg class="cam-svg" id="camSvg" viewBox="0 0 800 800" aria-hidden="true">
+        <defs>
+          <path id="arc0" d="M 226.5,161.3 A 295,295 0 0,1 573.5,161.3" fill="none"/>
+          <path id="arc1" d="M 573.5,161.3 A 295,295 0 0,1 680.5,491.2" fill="none"/>
+          <path id="arc2" d="M 680.5,491.2 A 295,295 0 0,1 400,695"     fill="none"/>
+          <path id="arc3" d="M 400,695 A 295,295 0 0,1 119.5,491.2"     fill="none"/>
+          <path id="arc4" d="M 119.5,491.2 A 295,295 0 0,1 226.5,161.3" fill="none"/>
+        </defs>
+
+        <g class="bracket">
+          <path d="M 320,330 L 320,348 M 320,330 L 338,330"/>
+          <path d="M 480,330 L 480,348 M 480,330 L 462,330"/>
+          <path d="M 320,470 L 320,452 M 320,470 L 338,470"/>
+          <path d="M 480,470 L 480,452 M 480,470 L 462,470"/>
+        </g>
+
+        <g class="segment active" data-idx="0">
+          <path class="hit" d="M 164.8,76.4 A 400,400 0 0,1 635.2,76.4 L 517.6,238.2 A 200,200 0 0,0 282.4,238.2 Z"/>
+          <text class="ring-label"><textPath href="#arc0" startOffset="50%" text-anchor="middle">AUDIOVISUAL</textPath></text>
+        </g>
+        <g class="segment" data-idx="1">
+          <path class="hit" d="M 635.2,76.4 A 400,400 0 0,1 780.4,523.6 L 590.2,461.8 A 200,200 0 0,0 517.6,238.2 Z"/>
+          <text class="ring-label"><textPath href="#arc1" startOffset="50%" text-anchor="middle">FILMMAKER</textPath></text>
+        </g>
+        <g class="segment" data-idx="2">
+          <path class="hit" d="M 780.4,523.6 A 400,400 0 0,1 400,800 L 400,600 A 200,200 0 0,0 590.2,461.8 Z"/>
+          <text class="ring-label"><textPath href="#arc2" startOffset="50%" text-anchor="middle">CAPTAÇÃO</textPath></text>
+        </g>
+        <g class="segment" data-idx="3">
+          <path class="hit" d="M 400,800 A 400,400 0 0,1 19.6,523.6 L 209.8,461.8 A 200,200 0 0,0 400,600 Z"/>
+          <text class="ring-label"><textPath href="#arc3" startOffset="50%" text-anchor="middle">DIREÇÃO</textPath></text>
+        </g>
+        <g class="segment" data-idx="4">
+          <path class="hit" d="M 19.6,523.6 A 400,400 0 0,1 164.8,76.4 L 282.4,238.2 A 200,200 0 0,0 209.8,461.8 Z"/>
+          <text class="ring-label"><textPath href="#arc4" startOffset="50%" text-anchor="middle">PÓS</textPath></text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- LADO DIREITO: descrição do segmento ativo -->
+    <aside class="info-side info-right">
+      <button class="info-x" id="infoCloseBtn" type="button" aria-label="Fechar seleção">×</button>
+      <p class="info-tagline" id="infoTagline">a história contada em movimento. Do roteiro à entrega final.</p>
+      <p class="info-desc" id="infoDesc">Produção audiovisual completa: vídeos institucionais, campanhas, social cuts e filmes corporativos. Da concepção ao corte final, tudo sob uma única inteligência criativa.</p>
+      <ul class="info-items" id="infoItems">
+        <li>Vídeo Institucional</li>
+        <li>Campanhas</li>
+        <li>Social Cuts</li>
+        <li>Filmes Corporativos</li>
+        <li>Roteiro</li>
+        <li>Storyboard</li>
+      </ul>
+      <button class="info-cta" type="button">falar com a equipe <span class="arr">→</span></button>
+    </aside>
+
+    <div class="cam-hint">clique numa <span>seção</span> da câmera · role pra ver o <span>estúdio</span></div>
+  </main>
+
+  <!-- SEÇÃO ESTÚDIO PRÓPRIO (carrossel de 6 salas) -->
+  <section class="studio-section" id="studioSection">
+    <div class="studio-intro">
+      <h2>estúdio próprio</h2>
+      <p class="lead">Seis ambientes integrados pra cobrir todas as frentes de produção: podcast, gastronomia, captação cromática, edição, color grading e sound design. Tudo sob o mesmo teto, sem terceirização.</p>
+    </div>
+
+    <div class="rooms-carousel" id="roomsCarousel">
+      <article class="room-card" data-idx="0">
+        <div class="room-photo" style="background-image:url('https://picsum.photos/id/1062/600/400?grayscale')"></div>
+        <div class="room-meta">
+          <span class="room-num">Sala 01</span>
+          <span class="room-name">podcast</span>
+        </div>
+        <p class="room-desc">Sala acústica tratada para conversas longas e gravações de áudio premium. Set de hospedeiro + entrevistador com câmeras 4K integradas.</p>
+        <ul class="room-specs">
+          <li>3 microfones Shure SM7B</li>
+          <li>Mesa Rodecaster Pro II</li>
+          <li>2 câmeras 4K cinema</li>
+          <li>Tratamento acústico completo</li>
+        </ul>
+      </article>
+
+      <article class="room-card" data-idx="1">
+        <div class="room-photo" style="background-image:url('https://picsum.photos/id/292/600/400?grayscale')"></div>
+        <div class="room-meta">
+          <span class="room-num">Sala 02</span>
+          <span class="room-name">cozinha</span>
+        </div>
+        <p class="room-desc">Cozinha equipada para produção de conteúdo gastronômico. Receitas, food content, lives e tutoriais com a estética e luz certa.</p>
+        <ul class="room-specs">
+          <li>Cooktop e forno profissional</li>
+          <li>Ilha central para captação</li>
+          <li>Iluminação alimentar</li>
+          <li>Câmeras top-down + frontal</li>
+        </ul>
+      </article>
+
+      <article class="room-card" data-idx="2">
+        <div class="room-photo" style="background-image:url('https://picsum.photos/id/96/600/400?grayscale')"></div>
+        <div class="room-meta">
+          <span class="room-num">Sala 03</span>
+          <span class="room-name">cyclorama</span>
+        </div>
+        <p class="room-desc">Ciclorama branco infinito + green screen para captação cromática, comerciais, fotos de produto e cenas com fundo virtual.</p>
+        <ul class="room-specs">
+          <li>Cyclorama branco 6m × 4m</li>
+          <li>Chave verde / green screen</li>
+          <li>Iluminação cinematográfica</li>
+          <li>Set design modular</li>
+        </ul>
+      </article>
+
+      <article class="room-card" data-idx="3">
+        <div class="room-photo" style="background-image:url('https://picsum.photos/id/180/600/400?grayscale')"></div>
+        <div class="room-meta">
+          <span class="room-num">Sala 04</span>
+          <span class="room-name">edição</span>
+        </div>
+        <p class="room-desc">Sala de edição com estações dedicadas para corte, finalização e revisão. Workflow integrado entre captação e entrega.</p>
+        <ul class="room-specs">
+          <li>Davinci Resolve / Premiere</li>
+          <li>Workstations Mac + PC</li>
+          <li>Monitor de referência 4K</li>
+          <li>Storage RAID compartilhado</li>
+        </ul>
+      </article>
+
+      <article class="room-card" data-idx="4">
+        <div class="room-photo" style="background-image:url('https://picsum.photos/id/335/600/400?grayscale')"></div>
+        <div class="room-meta">
+          <span class="room-num">Sala 05</span>
+          <span class="room-name">color grading</span>
+        </div>
+        <p class="room-desc">Sala escura calibrada para color grading profissional. Ambiente neutro, monitor de referência e painel de controle dedicado.</p>
+        <ul class="room-specs">
+          <li>Davinci Resolve Studio</li>
+          <li>Painel de color profissional</li>
+          <li>Monitor HDR calibrado</li>
+          <li>Ambiente neutro D65</li>
+        </ul>
+      </article>
+
+      <article class="room-card" data-idx="5">
+        <div class="room-photo" style="background-image:url('https://picsum.photos/id/452/600/400?grayscale')"></div>
+        <div class="room-meta">
+          <span class="room-num">Sala 06</span>
+          <span class="room-name">sound design</span>
+        </div>
+        <p class="room-desc">Sala de áudio com tratamento acústico para mixagem, dublagem, voice-over e sound design. Isolamento total e monitoração profissional.</p>
+        <ul class="room-specs">
+          <li>Pro Tools HDX</li>
+          <li>Cabine de gravação isolada</li>
+          <li>Monitores Genelec</li>
+          <li>Foley & sound library</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="room-dots" id="roomDots" role="tablist" aria-label="Selecionar sala">
+      <span class="room-dot active" data-idx="0" role="tab" aria-label="Sala 01"></span>
+      <span class="room-dot" data-idx="1" role="tab" aria-label="Sala 02"></span>
+      <span class="room-dot" data-idx="2" role="tab" aria-label="Sala 03"></span>
+      <span class="room-dot" data-idx="3" role="tab" aria-label="Sala 04"></span>
+      <span class="room-dot" data-idx="4" role="tab" aria-label="Sala 05"></span>
+      <span class="room-dot" data-idx="5" role="tab" aria-label="Sala 06"></span>
+    </div>
+  </section>
+
+  <script src="assets/estudio.js?v=2" defer></script>
+</body>
+</html>
