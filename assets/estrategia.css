@@ -4,7 +4,7 @@
   --linha:rgba(255,255,255,.10);
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:clip}
 html,body{min-height:100%}
 body{background:#08080a;color:var(--branco);font-family:var(--mono);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 

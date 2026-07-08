@@ -9,7 +9,7 @@
 *{margin:0;padding:0;box-sizing:border-box}
 .svg-defs{position:absolute}
 html,body{min-height:100%}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:clip}
 body{
   background:#000;
   color:var(--branco);
