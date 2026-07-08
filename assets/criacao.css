@@ -4,7 +4,7 @@
   --sans:'Montserrat', system-ui, sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth;overflow-x:clip}
+html{scroll-behavior:smooth;overflow-x:hidden}
 html,body{min-height:100%}
 body{background:#060607;color:var(--branco);font-family:var(--mono);overflow-x:hidden;-webkit-font-smoothing:antialiased}
 
