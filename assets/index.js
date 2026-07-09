@@ -44,6 +44,7 @@
   const overlay = document.getElementById('overlay');
   const openBtn = document.getElementById('openMenu');
   const menuLogoBtn = document.getElementById('menuLogoBtn');
+  const menuCloseBtn = document.getElementById('menuCloseBtn');
   const body = document.body;
   const focusableSel = 'a[href], button:not([disabled])';
 
@@ -65,6 +66,7 @@
 
   openBtn.addEventListener('click', open);
   if (menuLogoBtn) menuLogoBtn.addEventListener('click', close);
+  if (menuCloseBtn) menuCloseBtn.addEventListener('click', close);
   overlay.addEventListener('click', e=>{ if (e.target === overlay) close(); });
   document.addEventListener('keydown', e=>{
     if (!overlay.classList.contains('open')) return;
