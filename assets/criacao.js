@@ -239,4 +239,23 @@
   window.addEventListener('scroll', onScroll, {passive:true});
   showStop(0);
   onScroll();
+
+  /* ===== ajuste responsivo: encolhe cada "print" pra caber na telinha ===== */
+  function fitViz(el){
+    if(!el) return;
+    if(el.classList.contains('vs')){ el.style.transform=''; return; } // .vs preenche a tela toda
+    el.style.transform='';
+    const sb = screenEl.getBoundingClientRect();
+    const r = el.getBoundingClientRect();
+    if(!sb.width || !r.width || !r.height) return;
+    const scale = Math.min(1, (sb.width*0.96)/r.width, (sb.height*0.94)/r.height);
+    el.style.transformOrigin = 'center center';
+    el.style.transform = scale < 0.995 ? 'scale(' + scale.toFixed(3) + ')' : '';
+  }
+  function fitAllViz(){
+    screenEl.querySelectorAll('.slide .viz-body > *').forEach(fitViz);
+  }
+  window.addEventListener('load', function(){ setTimeout(fitAllViz, 120); });
+  window.addEventListener('resize', fitAllViz);
+  setTimeout(fitAllViz, 60);
 })();
