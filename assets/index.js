@@ -11,6 +11,7 @@
   let p = 0;
   let done = false;
   const reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const skipLoader = location.hash === '#menu';  /* veio do "menu" de outra pagina -> sem tela de carregamento */
 
   function finish(){
     if (done) return;
@@ -21,7 +22,11 @@
     pre.classList.add('done');
   }
 
-  if (reduce){
+  if (skipLoader){
+    done = true;
+    body.classList.add('reveal');
+    pre.style.display = 'none';
+  } else if (reduce){
     finish();
   } else {
     const tick = setInterval(()=>{
@@ -84,7 +89,7 @@
      e remove o #menu da URL, pra que recarregar mostre a página inicial */
   if (location.hash === '#menu'){
     history.replaceState(null, '', location.pathname + location.search);
-    setTimeout(open, 400);
+    setTimeout(open, 250);
   }
 })();
 
