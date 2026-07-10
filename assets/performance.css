@@ -64,19 +64,24 @@ body{background:#060607;color:var(--branco);font-family:var(--mono);
   background:linear-gradient(90deg, transparent, rgba(255,255,255,.22), transparent);
   pointer-events:none;z-index:2}
 
-.dash-bar{display:flex;align-items:center;justify-content:center;
-  padding:14px 22px;border-bottom:1px solid rgba(255,255,255,.06);
+.dash-bar{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;
+  padding:16px 22px;border-bottom:1px solid rgba(255,255,255,.06);
   background:rgba(255,255,255,.02)}
+.dash-hint{font-family:var(--mono);font-size:10px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--cinza-dim);text-align:center;display:inline-flex;align-items:center;gap:8px;
+  animation:dashHintPulse 2.6s ease-in-out infinite}
+.dash-hint .dh-arrow{font-size:12px}
+@keyframes dashHintPulse{0%,100%{opacity:.5}50%{opacity:1}}
 
 /* Navegação das 5 frentes dentro do dashboard */
 .dash-nav{display:flex;align-items:center;gap:22px;flex-wrap:wrap;justify-content:center}
-.dn-tab{appearance:none;background:none;border:none;cursor:pointer;
-  font-family:var(--mono);font-size:10.5px;letter-spacing:.22em;font-weight:500;
-  color:var(--cinza-dim);text-transform:uppercase;
-  padding:6px 0;border-bottom:1px solid transparent;
-  transition:color .3s, border-color .3s}
-.dn-tab:hover{color:var(--branco)}
-.dn-tab.on{color:var(--branco);border-color:var(--branco)}
+.dn-tab{appearance:none;background:none;cursor:pointer;
+  font-family:var(--mono);font-size:11px;letter-spacing:.14em;font-weight:500;
+  color:var(--cinza);text-transform:uppercase;
+  padding:9px 15px;border:1px solid rgba(255,255,255,.24);border-radius:4px;
+  transition:color .3s, border-color .3s, background .3s}
+.dn-tab:hover{color:var(--branco);border-color:var(--branco);background:rgba(255,255,255,.06)}
+.dn-tab.on{color:var(--preto);background:var(--branco);border-color:var(--branco)}
 
 /* ====== GRID DE VISUAIS ====== */
 .visuals{display:grid;grid-template-columns:2.2fr 1fr 1fr;gap:1px;
@@ -480,18 +485,19 @@ body{background:#060607;color:var(--branco);font-family:var(--mono);
   .funnel-row{grid-template-columns:130px 1fr;gap:12px}
   .f-label{font-size:10.5px}
   .dash-bar{padding:12px 16px}
-  .dash-nav{gap:12px;width:100%}
-  .dn-tab{font-size:9.5px;letter-spacing:.18em}
+  .dash-nav{gap:10px;width:100%}
+  .dn-tab{font-size:10px;letter-spacing:.1em;padding:8px 12px}
 }
 @media(max-width:540px){
   body{overflow-x:hidden}
   .back{top:18px;left:18px;font-size:16px}
   .bigname{font-size:clamp(38px,13vw,68px);top:4vh;opacity:.22}
   .stage{padding:90px 14px 12px;gap:16px}
-  .dash-bar{padding:10px 14px;flex-wrap:wrap;gap:8px}
+  .dash-bar{padding:12px 12px;gap:10px}
+  .dash-hint{font-size:9px;letter-spacing:.14em}
   .bar-label{font-size:9px;letter-spacing:.18em}
-  .dash-nav{gap:10px}
-  .dn-tab{font-size:9px;letter-spacing:.16em;padding:4px 0}
+  .dash-nav{gap:8px}
+  .dn-tab{font-size:9.5px;letter-spacing:.08em;padding:8px 11px}
   .viz{padding:16px 14px;min-height:0;gap:10px}
   .viz-hero{min-height:160px}
   .viz-label{font-size:9px;letter-spacing:.2em}
