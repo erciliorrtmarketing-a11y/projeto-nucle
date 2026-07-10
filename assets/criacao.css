@@ -363,11 +363,13 @@ body{background:#060607;color:var(--branco);font-family:var(--mono);overflow-x:h
     grid-template-columns:1fr;grid-template-rows:auto auto;
     padding:84px 16px 24px;gap:18px;align-content:center}
   .back{top:18px;left:18px;font-size:16px}
-  .bigname{font-size:clamp(26px,9vw,44px);top:1.2vh;opacity:.32}
+  .bigname{font-size:clamp(20px,6.2vw,32px);top:70px;opacity:.5}
   .device{max-width:88vw}
   .mb-base{height:14px}
   .panel{max-width:94vw}
-  .panel-card{padding:22px 18px;border-radius:16px}
+  .panel-card{padding:22px 18px;border-radius:16px;
+    -webkit-backdrop-filter:none;backdrop-filter:none;
+    background:linear-gradient(180deg,#17171c,#0f0f13)}
   .p-tag{font-size:15px;margin-bottom:14px}
   .p-desc{font-size:12px;margin-bottom:18px}
   .p-items{grid-template-columns:1fr;gap:8px;padding-top:14px;margin-bottom:18px}

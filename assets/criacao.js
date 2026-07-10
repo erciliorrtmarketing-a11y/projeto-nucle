@@ -224,21 +224,32 @@
   /* ===== scroll handler ===== */
   const progressBar = document.getElementById('progress');
   const deviceEl = document.getElementById('device');
-  function onScroll(){
+  let ticking = false;
+  function render(){
     const sY = window.scrollY || document.documentElement.scrollTop;
     const segH = window.innerHeight;
     const raw = Math.max(0, Math.min(STOPS-1, sY/segH));
     showStop(Math.round(raw));
     const max = (STOPS-1) * segH;
     progressBar.style.width = (max>0 ? (sY/max*100) : 0) + '%';
-    const t = (raw / (STOPS-1)) * 4 - 2;
-    deviceEl.style.transform = `perspective(2200px) rotateX(${t*0.4}deg) rotateY(${t*0.6}deg)`;
+    /* rotação 3D só no desktop — no celular deixa reto, pra rolagem fluida */
+    if (window.innerWidth > 760){
+      const t = (raw / (STOPS-1)) * 4 - 2;
+      deviceEl.style.transform = `perspective(2200px) rotateX(${t*0.4}deg) rotateY(${t*0.6}deg)`;
+    } else {
+      deviceEl.style.transform = '';
+    }
     if (scrollHint && sY > 40) scrollHint.classList.add('hide');
     else if (scrollHint) scrollHint.classList.remove('hide');
   }
+  function onScroll(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(()=>{ render(); ticking = false; });
+  }
   window.addEventListener('scroll', onScroll, {passive:true});
   showStop(0);
-  onScroll();
+  render();
 
   /* ===== ajuste responsivo: encolhe cada "print" pra caber na telinha ===== */
   function fitViz(el){
