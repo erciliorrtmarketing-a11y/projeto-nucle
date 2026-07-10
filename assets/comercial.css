@@ -53,8 +53,11 @@ body{background:#08080a;color:var(--branco);font-family:var(--mono);overflow-x:h
 .core-word .dot{color:var(--cinza-3)}
 .core-word:focus,.core-word:focus-visible{outline:none}
 .core-word:hover{color:var(--cinza)}
-.core-hint{font-family:var(--mono);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--cinza-dim);
+.ex:not(.is-open) .core-word{animation:corePulse 3.2s var(--ease) infinite}
+@keyframes corePulse{0%,100%{transform:scale(1)}50%{transform:scale(1.035)}}
+.core-hint{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--cinza-dim);
   animation:hintPulse 2.6s ease-in-out infinite;transition:opacity .35s var(--ease)}
+.core-hint .hint-up{display:inline-block;margin-right:.35em;font-size:1.15em;transform:translateY(1px)}
 @keyframes hintPulse{0%,100%{opacity:.45}50%{opacity:.95}}
 .ex.is-open .core-word{pointer-events:none;font-size:clamp(46px,8.5vmin,104px)}
 .ex.is-open .core-hint{opacity:0;height:0;margin-top:-16px;animation:none}
