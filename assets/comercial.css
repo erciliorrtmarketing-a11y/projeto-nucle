@@ -16,7 +16,7 @@ body{background:#08080a;color:var(--branco);font-family:var(--mono);overflow-x:h
 /* navegação */
 .back{position:fixed;top:clamp(16px,2.6vmin,30px);left:clamp(18px,3vw,40px);z-index:41;
   display:inline-flex;align-items:baseline;gap:2px;color:var(--cinza);text-decoration:none;
-  font-family:var(--mono);font-weight:800;font-size:clamp(15px,1.6vmin,20px);opacity:.9;
+  font-family:var(--mono);font-weight:700;font-size:clamp(12px,1.3vmin,15px);opacity:.9;
   transition:opacity .3s, transform .3s var(--ease)}
 .back:hover{color:var(--branco);opacity:1;transform:translateX(-2px)}
 .back .br{color:var(--cinza-3);font-weight:500;margin:0 .04em}

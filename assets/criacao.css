@@ -18,7 +18,7 @@ body{background:#060607;color:var(--branco);font-family:var(--mono);overflow-x:h
 
 .back{position:fixed;top:28px;left:38px;z-index:20;display:inline-flex;align-items:baseline;gap:2px;
   color:var(--cinza);text-decoration:none;font-family:var(--mono);
-  font-weight:800;font-size:18px;letter-spacing:-.01em;line-height:1;
+  font-weight:700;font-size:14px;letter-spacing:-.01em;line-height:1;
   transition:opacity .3s, transform .3s cubic-bezier(.2,.7,.2,1);cursor:pointer;opacity:.9}
 .back:hover{opacity:1;transform:translateX(-2px);color:var(--branco)}
 .back .br{color:#7c7c84;font-weight:500;font-size:18px;margin:0 .04em}
@@ -362,7 +362,7 @@ body{background:#060607;color:var(--branco);font-family:var(--mono);overflow-x:h
   .scene{position:fixed;inset:0;
     grid-template-columns:1fr;grid-template-rows:auto auto;
     padding:84px 16px 24px;gap:18px;align-content:center}
-  .back{top:18px;left:18px;font-size:16px}
+  .back{top:18px;left:18px;font-size:13px}
   .bigname{font-size:clamp(20px,6.2vw,32px);top:70px;opacity:.5}
   .device{max-width:88vw}
   .mb-base{height:14px}

@@ -20,7 +20,7 @@ body::before{content:"";position:fixed;inset:0;z-index:0;
 
 .back{position:fixed;top:28px;left:38px;z-index:10;display:inline-flex;align-items:baseline;gap:2px;
   color:#0a0a0a;text-decoration:none;font-family:'JetBrains Mono',ui-monospace,monospace;
-  font-weight:800;font-size:18px;letter-spacing:-.01em;line-height:1;
+  font-weight:700;font-size:14px;letter-spacing:-.01em;line-height:1;
   transition:opacity .3s, transform .3s cubic-bezier(.2,.7,.2,1);cursor:pointer;opacity:.9}
 .back:hover{opacity:1;transform:translateX(-2px)}
 .back .br{color:#888;font-weight:500;font-size:18px;margin:0 .04em}
@@ -293,7 +293,7 @@ body::before{content:"";position:fixed;inset:0;z-index:0;
 @media(max-width:540px){
   body{overflow-x:hidden}
   :root{--cam-size:84vmin}
-  .back{top:18px;left:18px;font-size:16px}
+  .back{top:18px;left:18px;font-size:13px}
   .stage{padding:64px 14px 40px;gap:18px}
   .info-name{font-size:clamp(36px,11vw,56px);line-height:.92}
   .info-tagline{font-size:13px;line-height:1.45}
