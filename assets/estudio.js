@@ -101,6 +101,16 @@
   }, 250);
 })();
 
+/* ---- DICA "role pra ver o estúdio": some ao rolar ---- */
+(function(){
+  const hint = document.querySelector('.cam-hint');
+  if (!hint) return;
+  addEventListener('scroll', ()=>{
+    if (window.scrollY > 40) hint.classList.add('hide');
+    else hint.classList.remove('hide');
+  }, {passive:true});
+})();
+
 /* ---- CARROSSEL DE SALAS + SCROLL OBSERVER ---- */
 (function(){
   const section = document.getElementById('studioSection'),

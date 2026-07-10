@@ -201,8 +201,10 @@ body::before{content:"";position:fixed;inset:0;z-index:0;
 .info-cta:hover{border-color:#0a0a0a;gap:20px}
 .info-cta .arr{transition:transform .3s}
 
-.cam-hint{grid-column:1 / -1;text-align:center;margin-top:24px;
-  font-size:9.5px;letter-spacing:.32em;color:#888;text-transform:uppercase}
+.cam-hint{position:fixed;left:0;right:0;bottom:clamp(16px,3vh,30px);z-index:6;text-align:center;
+  font-size:9.5px;letter-spacing:.32em;color:#888;text-transform:uppercase;
+  transition:opacity .45s ease}
+.cam-hint.hide{opacity:0;pointer-events:none}
 .cam-hint span{color:#0a0a0a}
 
 /* ============ SEÇÃO ESTÚDIO PRÓPRIO ============ */
